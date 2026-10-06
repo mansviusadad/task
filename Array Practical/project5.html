@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,14 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>C Loop Programs</title>
+    <title>C Array Programs</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <style>
 
@@ -25,7 +26,7 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: #f7f3ff;
+            background: #f4f7fb;
             color: #222;
         }
 
@@ -33,7 +34,7 @@
         /* ================= HEADER ================= */
 
         header {
-            background: linear-gradient(135deg, #0c011cb1, #3a036d9c);
+            background: linear-gradient(135deg, #111827, #1f2937);
             color: white;
             text-align: center;
             padding: 55px 20px;
@@ -42,6 +43,7 @@
         header .icon {
             font-size: 50px;
             margin-bottom: 10px;
+            color: #f59e0b;
         }
 
         header h1 {
@@ -52,7 +54,7 @@
 
         header p {
             font-size: 17px;
-            color: #d0d7de;
+            color: #d1d5db;
         }
 
 
@@ -69,7 +71,7 @@
             display: inline-block;
             text-decoration: none;
             color: white;
-           background: #35205f;
+            background: #1f2937;
             padding: 10px 18px;
             border-radius: 7px;
             margin-bottom: 35px;
@@ -77,8 +79,9 @@
         }
 
         .back-btn:hover {
-             background: #4b258797;
+            background: #d97706;
             color: white;
+            transform: translateY(-2px);
         }
 
 
@@ -96,7 +99,7 @@
         }
 
         .section-title p {
-            color: #666;
+            color: #6b7280;
             margin-top: 8px;
         }
 
@@ -104,20 +107,20 @@
         /* ================= PROGRAM CARD ================= */
 
         .program-card {
-            background: #faf7ff;
-            border: 1px solid #eadcff;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
             border-radius: 15px;
             padding: 30px 25px;
             height: 100%;
 
-            box-shadow: 0 6px 20px rgba(109, 40, 217, 0.12);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 
             transition: all 0.3s ease;
         }
 
         .program-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 14px 32px rgba(109, 40, 217, 0.20);
+            box-shadow: 0 14px 32px rgba(31, 41, 55, 0.18);
         }
 
 
@@ -131,8 +134,8 @@
             align-items: center;
             justify-content: center;
 
-            background: #ede9fe;
-            color: #7c3aed;
+            background: #fef3c7;
+            color: #d97706;
 
             border-radius: 50%;
 
@@ -144,22 +147,29 @@
         }
 
         .program-card:hover .program-icon {
-             background: #4b258797;
+            background: #d97706;
             color: white;
         }
 
 
         /* ================= CARD TEXT ================= */
 
-        .program-card h3 {
-            color: #5b21b6;
+        .program-card h2 {
+            color: #1f2937;
             font-size: 22px;
             font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .program-card h3 {
+            color: #d97706;
+            font-size: 18px;
+            font-weight: 600;
             margin-bottom: 12px;
         }
 
         .program-card p {
-            color: #666;
+            color: #6b7280;
             line-height: 1.6;
             min-height: 75px;
         }
@@ -171,7 +181,7 @@
             display: inline-block;
             text-decoration: none;
 
-            background: #35205f;
+            background: #1f2937;
             color: white;
 
             padding: 10px 18px;
@@ -183,8 +193,9 @@
         }
 
         .btn-program:hover {
-            background: #4b258797;
+            background: #d97706;
             color: white;
+            transform: translateY(-2px);
         }
 
 
@@ -199,6 +210,7 @@
             font-size: 28px;
             font-weight: 700;
             margin-bottom: 25px;
+            color: #1f2937;
         }
 
         .recording-section video {
@@ -212,7 +224,7 @@
         /* ================= FOOTER ================= */
 
         footer {
-            background: #0c011cb1;
+            background: #111827;
             color: white;
             text-align: center;
             padding: 22px 15px;
@@ -221,7 +233,7 @@
 
         footer p {
             margin: 0;
-            color: #d0d7de;
+            color: #d1d5db;
         }
 
 
@@ -241,6 +253,39 @@
                 font-size: 27px;
             }
 
+            .main-section {
+                padding: 50px 0;
+            }
+
+        }
+
+
+        @media (max-width: 576px) {
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            header p {
+                font-size: 15px;
+            }
+
+            .program-card {
+                padding: 25px 20px;
+            }
+
+            .program-card h2 {
+                font-size: 20px;
+            }
+
+            .recording-section {
+                margin-top: 50px;
+            }
+
+            .recording-section h2 {
+                font-size: 23px;
+            }
+
         }
 
     </style>
@@ -256,7 +301,7 @@
     <header>
 
         <div class="icon">
-            <i class="bi bi-arrow-repeat"></i>
+            <i class="bi bi-grid-3x3-gap"></i>
         </div>
 
         <h1>C Array Programs</h1>
@@ -276,9 +321,9 @@
         <div class="container">
 
 
-            <!-- BACK BUTTON -->
+            <!-- ================= BACK BUTTON ================= -->
 
-           <a href="../index.html" class="back-btn">
+            <a href="../index.html" class="back-btn">
 
                 <i class="bi bi-arrow-left"></i>
 
@@ -288,7 +333,7 @@
 
 
 
-            <!-- TITLE -->
+            <!-- ================= TITLE ================= -->
 
             <div class="section-title">
 
@@ -307,7 +352,7 @@
             <div class="row g-4">
 
 
-                <!-- negativeelement -->
+                <!-- ================= NEGATIVE ELEMENT ================= -->
 
                 <div class="col-lg-4 col-md-6">
 
@@ -320,10 +365,9 @@
                         </div>
 
                         <h2>
-                           Nagetive element
+                            Negative Element
                         </h2>
 
-                        
                         <a href="./NEG_1_AR.CPP" class="btn-program">
 
                             View Program
@@ -338,7 +382,7 @@
 
 
 
-                <!-- largest element -->
+                <!-- ================= LARGEST ELEMENT ================= -->
 
                 <div class="col-lg-4 col-md-6">
 
@@ -346,15 +390,13 @@
 
                         <div class="program-icon">
 
-                            <i class="bi bi-alphabet"></i>
+                            <i class="bi bi-bar-chart-line"></i>
 
                         </div>
 
                         <h2>
                             Largest Element
                         </h2>
-
-                       
 
                         <a href="./LARG_2_A.CPP" class="btn-program">
 
@@ -370,7 +412,7 @@
 
 
 
-                <!-- transpose -->
+                <!-- ================= TRANSPOSE ================= -->
 
                 <div class="col-lg-4 col-md-6">
 
@@ -378,7 +420,7 @@
 
                         <div class="program-icon">
 
-                            <i class="bi bi-calculator"></i>
+                            <i class="bi bi-arrow-left-right"></i>
 
                         </div>
 
@@ -397,7 +439,10 @@
                     </div>
 
                 </div>
-                 <!-- sum of row & column -->
+
+
+
+                <!-- ================= SUM OF ROW & COLUMN ================= -->
 
                 <div class="col-lg-4 col-md-6">
 
@@ -418,21 +463,39 @@
                             View Program
 
                             <i class="bi bi-arrow-right"></i>
+
                         </a>
+
                     </div>
+
                 </div>
+
+
             </div>
+
+
+
             <!-- ================= RECORDING ================= -->
+
             <div class="recording-section">
+
                 <h2>
                     🎥 All Programs Screen Recording
                 </h2>
+
                 <video controls>
+
                     <source src="./screen-capture.webm" type="video/webm">
+
                     Your browser does not support the video tag.
+
                 </video>
+
             </div>
+
+
         </div>
+
     </section>
 
 
@@ -456,4 +519,3 @@
 </body>
 
 </html>
-```
